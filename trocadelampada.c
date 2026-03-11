@@ -3,16 +3,34 @@
 void main()
 {
     int tem_alguem_para_segurar_a_escada = 0;
+    int a_lampada_nova_esta_funcionando = 0;
 
+    do
+    {
+        printf("Comprar a lâmpada nova\n");
+        printf("Desligar a energia\n");
+        printf("Pegar a escada\n");
 
-    printf("Comprar a lâmpada nova\n");
-    printf("Desligar a energia\n");
-    printf("Pegar a escada\n");
-
-    if (tem_alguem_para_segurar_a_escada){
-        printf("Pedir para alguém segurar a escada"); 
-    } else {
-        printf("Colocar mesa para apoiar a escada"); 
-    }
-
+        if (tem_alguem_para_segurar_a_escada)
+        {
+            printf("Pedir para alguém segurar a escada\n");
+            printf("Pedir para alguém segurar a lâmpada\n");
+        }
+        else
+        {
+            printf("Colocar mesa para apoiar a escada\n");
+        }
+        printf("Posicionar a escada embaixo da lâmpada\n");
+        printf("Pegar a lâmpada nova\n");
+        printf("Subir a escada com a lâmpada na mão\n");
+        printf("Esperar a lâmpada esfriar\n");
+        printf("Desrosquear a lâmpada antiga\n");
+        printf("Guardar a lâmpada antiga no bolso\n");
+        printf("Rosquear a lâmpada nova\n");
+        printf("Descer da escada\n");
+        printf("Guardar a escada\n");
+        printf("Deixar a lâmpada aniga de lado\n");
+        printf("Religar a energia\n");
+    } while (!a_lampada_nova_esta_funcionando);
+    printf("Descartar a lâmpada antiga\n");
 }
