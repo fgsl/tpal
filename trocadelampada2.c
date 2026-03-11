@@ -4,6 +4,7 @@ void main()
 {
     int tem_alguem_para_segurar_a_escada = 0;
     int a_lampada_nova_esta_funcionando = 0;
+    char resposta;
 
     do
     {
@@ -11,9 +12,10 @@ void main()
         printf("Desligar a energia\n");
         printf("Pegar a escada\n");
 
-        printf("Tem alguém para segurar a escada? 1 - Sim - 0 - Não ");
-        scanf("%d",&tem_alguem_para_segurar_a_escada);
+        printf("Tem alguém para segurar a escada? (S) Sim - (N) Não ");
+        scanf("%c",&resposta);
         getchar();
+        tem_alguem_para_segurar_a_escada = (resposta == 'S' ? 1 : 0);
         if (tem_alguem_para_segurar_a_escada)
         {
             printf("Pedir para alguém segurar a escada\n");
@@ -34,9 +36,10 @@ void main()
         printf("Guardar a escada\n");
         printf("Deixar a lâmpada aniga de lado\n");
         printf("Religar a energia\n");
-        printf("A lâmpada nova está funcionando? 1 - Sim - 0 - Não\n");
-        scanf("%d",&a_lampada_nova_esta_funcionando);
+        printf("A lâmpada nova está funcionando? (S) Sim (N) Não\n");
+        scanf("%c",&resposta);
         getchar();
+        a_lampada_nova_esta_funcionando = (resposta == 'S' ? 1 : 0);
     } while (!a_lampada_nova_esta_funcionando);
     printf("Descartar a lâmpada antiga\n");
 }
