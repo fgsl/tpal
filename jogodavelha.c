@@ -25,12 +25,11 @@ void main()
         tabuleiro[linha][coluna] = simbolo;
         for(int i=0;i<3;i++)
         {
-            printf(" _  _  _\n");
+            printf("\n _  _  _\n");
             for(int j=0;j<3;j++)
             {
                 printf("|%c|",tabuleiro[i][j]);
             }
-            printf("\n _  _  _\n");
             
         }        
     } while (!jogador_venceu && 
