@@ -10,6 +10,7 @@ void main()
         {' ',' ',' '},
     };
     int linha,coluna;
+    int dado_invalido = 0;
 
     do {
         printf("Qual símbolo você deseja usar? ");
@@ -18,10 +19,16 @@ void main()
     while (simbolo != 'O' && simbolo != 'X');
     printf("\nVocê escolheu o símbolo %c",simbolo);
     do {
-        printf("\nQual é a linha? ");
-        scanf("%d",&linha);
-        printf("\nQual é a coluna? ");
-        scanf("%d",&coluna);
+        do {
+            if (dado_invalido){
+                printf("Dados inválidos");
+            }
+            printf("\nQual é a linha? ");
+            scanf("%d",&linha);
+            printf("\nQual é a coluna? ");
+            scanf("%d",&coluna);
+            dado_invalido = 1;
+        } while(linha < 0 || linha > 2 || coluna < 0 || coluna > 2 );
         tabuleiro[linha][coluna] = simbolo;
         for(int i=0;i<3;i++)
         {
